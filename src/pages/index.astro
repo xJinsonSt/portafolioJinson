@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from "../components/Badge.astro";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import EmailIcon from "../components/icons/Email.astro";
+import SocialPill from "../components/SocialPill.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Welcome />
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-44">
+      <h1 class="text-5xl font-bold flex flex-row gap-x pb-10">
+        Hola, soy Jinson
+        <a
+          href="https://www.linkedin.com/in/jinson-medina/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center font-bold"
+        >
+          <Badge>¡Listo para Ayudarte!</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl">
+        Tecnólogo en Desarrollo de Software especializado en aplicaciones web y
+        móviles. Apasionado por la tecnología y el diseño de soluciones
+        innovadoras. ¡Saludos desde Ecuador!
+      </h2>
+
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPill href="https://www.linkedin.com/in/jinson-medina/">
+          <LinkedInIcon class="size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/Jinson25">
+          <GitHubIcon class="size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:jinsonalejandro@gmail.com">
+          <EmailIcon class="size-6" />
+          jinsonalejandro@gmail.com
+        </SocialPill>
+      </nav>
+    </section>
+  </main>
 </Layout>
